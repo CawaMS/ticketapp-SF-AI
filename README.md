@@ -130,8 +130,16 @@ public StatelessBackendService(StatelessServiceContext context)
 
 ## How to run the app
 
+//TODO
+
 ### Debug the app locally
+
+//TODO
 
 ### Deploy to Azure
 
-## E2E trace viewer in
+//TODO
+
+## E2E trace viewer in Application Insights
+
+//TODO
