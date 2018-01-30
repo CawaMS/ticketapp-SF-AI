@@ -6,7 +6,7 @@
     <Parameter Name="WebService_InstanceCount" DefaultValue="-1" />
     <Parameter Name="WebService_StatelessBackendServiceName" DefaultValue="StatelessBackendService" />
     <Parameter Name="WebService_ReverseProxyPort" DefaultValue="19081" />
-    <Parameter Name="ApplicationInsightsKey" DefaultValue="" />
+    <Parameter Name="ApplicationInsightsKey" DefaultValue="[ApplicationInsights_Key]" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
@@ -17,7 +17,7 @@
       <ConfigOverride Name="Config">
         <Settings>
           <Section Name="ApplicationInsights">
-            <Parameter Name="InstrumentationKey" Value="" />
+            <Parameter Name="InstrumentationKey" Value="[ApplicationInsights_Key]" />
           </Section>
         </Settings>
       </ConfigOverride>
@@ -29,7 +29,7 @@
       <ConfigOverride Name="Config">
         <Settings>
           <Section Name="ApplicationInsights">
-            <Parameter Name="InstrumentationKey" Value="" />
+            <Parameter Name="InstrumentationKey" Value="[ApplicationInsights_Key]" />
           </Section>
         </Settings>
       </ConfigOverride>
@@ -45,7 +45,7 @@
             <Parameter Name="ReverseProxyPort" Value="[WebService_ReverseProxyPort]" />
           </Section>
           <Section Name="ApplicationInsights">
-            <Parameter Name="InstrumentationKey" Value="" />
+            <Parameter Name="InstrumentationKey" Value="[ApplicationInsights_Key]" />
           </Section>
         </Settings>
       </ConfigOverride>

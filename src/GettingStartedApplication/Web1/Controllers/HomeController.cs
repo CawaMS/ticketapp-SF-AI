@@ -18,8 +18,7 @@ namespace Web1.Controllers
 
             // client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            HttpResponseMessage response = await client.GetAsync("http://sfoneappdemo3-sf.centralus.cloudapp.azure.com:8081/api/StatelessBackendService/");
-            //HttpResponseMessage response = await client.GetAsync("http://localhost:8081/api/StatelessBackendService/");
+            HttpResponseMessage response = await client.GetAsync("http://localhost:8081/api/StatelessBackendService/");
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
 
