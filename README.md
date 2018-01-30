@@ -178,12 +178,26 @@ This section describes how to setup a secure Service Fabric cluster to host your
 
 ### Deploy to Azure
 
-1. install the certificate you created in previous section to your local development machine. Having the certificate in Personal store under Current User is sufficient.
+1. Go to Web1/Controllers/HomeController.cs, change this line of code in Index method to point to your cluster
 
-2. Right click on the GettingStartedApplication, select Publish...
+Before:
 
-3. Enter the Connection Endpoint to point to the cluster you created earlier. After a little while, you should see a green check mark indicating your machine can connect to the cluster endpoint using the certificate you installed earlier.
+```csharp
+HttpResponseMessage response = await client.GetAsync("http://localhost:8081/api/StatelessBackendService/");
+```
 
-4. Click Publish
+After:
 
-5. Navigate to your application hosted on the cluster, refresh the page, generate some Exceptions and navigate to your Application Insights resource to view E2E traces
+```csharp
+HttpResponseMessage response = await client.GetAsync("http://your-sf-cluster-domain-name.centralus.cloudapp.azure.com:8081/api/StatelessBackendService/");
+```
+
+2. install the certificate you created in previous section to your local development machine. Having the certificate in Personal store under Current User is sufficient.
+
+3. Right click on the GettingStartedApplication, select Publish...
+
+4. Enter the Connection Endpoint to point to the cluster you created earlier. After a little while, you should see a green check mark indicating your machine can connect to the cluster endpoint using the certificate you installed earlier.
+
+5. Click Publish
+
+6. Navigate to your application hosted on the cluster, refresh the page, generate some Exceptions and navigate to your Application Insights resource to view E2E traces
