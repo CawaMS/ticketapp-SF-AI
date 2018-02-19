@@ -19,7 +19,7 @@ Using Service Fabric with Application Insights](https://github.com/Azure-Samples
 * Microsoft.ApplicationInsights.AspNetCore
 * Microsoft.ApplicationInsights.EventSourceListener
 * Microsoft.ApplicationInsights.DependencyCollector
-* Microsoft.aspnet.teleemtrycorrelation
+* Microsoft.aspnet.telemetrycorrelation
 * All dependencies for above
 
 ### Add Code to initialize telemetry client
